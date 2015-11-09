@@ -1,0 +1,144 @@
+<div id="home">
+<header>
+    <img src="img/header.jpg" />
+</header>
+<nav id="top" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <a class="navbar-brand" href="#top">Home</a>
+    <a class="navbar-brand loginbutton" ng-hide="user" href="" popup-login >Login</a>
+    <a class="navbar-brand" ng-click="logout()" ng-show="user"  href="" >Logout</a>
+    <a ui-sref="editAcc"><img class="avek img-circle" ng-show="user" src="img/{{user.avek}}" /></a>
+    <img class="add img-circle" ng-show="user" src="img/add_rom.png" popup-add-new-room />
+</nav>
+<section>
+    <div class="row">
+        <div class="col-md-4">
+            <div my-rooms="Left" ng-repeat="Left in leftPanel" class="room" id="{{ Left.id }}">
+                <img class="miniaturka" src="img/{{ Left.thumb }}" />
+                <div class="lw">
+                    <h1 class="text-center">{{ Left.count_post }}</h1>
+                </div>
+                <div class="content">
+                    <header>
+                        <div class="description">
+                            <img class="avek img-circle" src="img/{{ Left.user.avek }}" />
+                            <h3 class="title">{{ Left.title }}</h3>
+                            <h5 class="user">Utworzony przez {{ Left.user.nick}}</h5>
+                        </div>
+                    </header>
+                    <section class="des">
+                        <p>
+                            {{ Left.content }}
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div my-rooms="Center" ng-repeat="Center in centerPanel" class="room" id="{{ Center.id }}">
+                <img class="miniaturka" src="img/{{ Center.thumb }}" />
+                <div class="lw">
+                    <h1 class="text-center">{{ Center.count_post }}</h1>
+                </div>
+                <div class="content">
+                    <header>
+                        <img class="avek img-circle" src="img/{{ Center.user.avek }}" />
+                        <div class="description">
+                            <h3 class="title">{{ Center.title }}</h3>
+                            <h5 class="user">Utorzony przez {{ Center.user.nick }}</h5>
+                        </div>
+                    </header>
+                    <section class="des">
+                        <p>
+                            {{ Center.content }}
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div my-rooms="Right"  ng-repeat="Right in rightPanel" class="room" id="{{ Right.id }}">
+                <img class="miniaturka" src="img/{{ Right.thumb }}" />
+                <div class="lw">
+                    <h1 class="text-center">{{ Right.count_post }}</h1>
+                </div>
+                <div class="content">
+                    <header>
+                        <img class="avek img-circle" src="img/{{ Right.user.avek }}" />
+                        <div class="description">
+                            <h3 class="title">{{ Right.title }}</h3>
+                            <h5 class="user">Utorzony przez {{ Right.user.nick }}</h5>
+                        </div>
+                    </header>
+                    <section class="des">
+                        <p>
+                            {{ Right.content }}
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<aside id="login">
+    <div class="background"></div>
+    <section>
+        <form class="validate container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="loginUser">Login:</label>
+                    <input id="loginUser" placeholder="Enter login" onfocus="true" ng-model="auth.nick" class="form-control" />
+                </div>
+                <div class="col-sm-6">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="Enter password" ng-model="auth.password" class="form-control" id="password" />
+                </div>
+            </div>
+            <div ng-hide="errorAuthentication" class="error" class="row ng-hide">
+                <div class="col-sm-8">
+                    <p>Zły login lub hasło</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-danger col-sm-12" ng-click="login()" >Wyślij</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</aside>
+<aside id="addNewRoom">
+    <div class="background"></div>
+    <section>
+        <form class="validate container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="tittleRoom">Title:</label>
+                    <input id="tittleRoom" placeholder="Tittle Room" onfocus="true" ng-model="room.title" class="form-control" />
+                </div>
+                <div class="col-sm-6">
+                    <label for="content">Content:</label>
+                    <textarea placeholder="Description of Room" ng-model="room.content" class="form-control" id="content" ></textarea>
+                </div>
+            </div>
+            <div ng-hide="errorAuthentication" class="error" class="row ng-hide">
+                <div class="col-sm-8">
+                    <p>Zły login lub hasło</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-danger col-sm-12" ng-click="createRoom()" >Wyślij</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</aside>
+
+<footer></footer>
+
+</div>
+
+
+
+
+

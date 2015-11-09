@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+
+#chat body{
+
+}
+
+#chat header{
+	background-image: url(../img/header.png);
+	/* [disabled]position: fixed; */
+	width: 100%;
+	height: 78px;
+	background-repeat: repeat-x;
+	position: fixed;
+	
+}
+
+#chat nav{
+	background-color: #313131;
+	height: 100%;
+	width: 30%;
+	position: fixed;
+	top: 78px;
+	
+	
+}
+
+#chat nav .content{
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	overflow: auto;	
+}
+
+#chat nav .content ul{
+	padding: 0px;
+	
+}
+
+#chat nav .content ul li{
+	margin-top: 10px;
+	
+}
+
+#chat nav .content ul .user{
+	background-color: white;
+	width: 95%;
+	height: 150px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-left: 5px;
+	
+}
+
+#chat nav .content ul .user .avek{
+	float: left;
+	margin-right: 5px;
+	height: 138px;
+	width: 138px;
+    border: 2px solid black;
+	
+}
+
+#chat nav .content ul .user h3{
+	margin-top: 0px;
+	
+}
+
+#chat nav .content ul .user h3.type{
+	color: red;	
+	
+}
+
+#chat nav .content ul .user img.rang{
+	
+}
+
+#chat nav .content ul .user img.info{
+	float: right;
+	margin-right: 10px;
+	margin-top: -70px;
+	
+}
+
+#chat section{
+	position: fixed;
+	left: 32%;
+	top: 80px;
+	width: 68%;
+	
+}
+
+#chat section .content{
+	padding-right: 2%;
+	z-index: -9999;	
+}
+
+#chat section p{
+	text-align: justify;	
+}
+
+#chat section img#miniaturka{
+	max-width: 100%;
+	border: 2px solid black;	
+}
+
+#chat section ul{
+	list-style: none;	
+}
+
+#chat .end{
+	height: 5px;
+	width: 100%;
+	background-color: black;	
+}
+
+#chat section .content .message{
+    position: relative;
+	margin-top: 20px;
+}
+
+#chat section .content .message .avek{
+	float: left;
+	margin-right: 10px;
+    border: 2px solid black;
+    height: 200px;
+	
+}
+
+#chat section .content .message .nick{
+	display: inline-block;
+	
+}
+
+#chat section .content .message .ranga{
+	color: red;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+}
+
+#chat section .content .message .deleteMsg{
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    bottom: 20px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+#chat section .content .message .deleteMsg:hover{
+    opacity: 1;
+
+}
+
+#chat section .content .message .deleteMsg p{
+    float: left;
+}
+
+
+
+#chat section .content .message .end{
+	height: 5px;
+	width: 100%;
+	background-color: black;
+	opacity: 0.4;
+	margin-top: 100px;
+}
+
+#chat section .content #message_box{
+	position: fixed;
+	bottom: 0px;
+	height: 200px;
+	width: 66%;
+	padding: 5px;
+	opacity: 0.7;
+		
+}
+
+#chat section .content #message_box button{
+	margin-top: 6px;
+	
+}
+
+#chat textarea {
+	resize: none;
+}

@@ -1,0 +1,14 @@
+.room.ng-enter,
+.room.ng-leave {
+    -webkit-transition:0.5s linear all;
+    transition:0.5s linear all;
+}
+
+.room.ng-enter,
+.room.ng-leave.ng-leave-active {
+    display: none;
+}
+.room.ng-leave,
+.room.ng-enter.ng-enter-active {
+    display: none;
+}
